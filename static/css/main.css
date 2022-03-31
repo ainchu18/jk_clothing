@@ -1,39 +1,52 @@
-  /* Carousel styling */
-  #introCarousel,
-  .carousel-inner,
-  .carousel-item,
-  .carousel-item.active {
-      height: 100vh;
-  }
+body {
+    font-family: 'Lato';
+}
 
-  .carousel-item:nth-child(1) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-  }
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+    height: 100vh;
+}
 
-  .carousel-item:nth-child(2) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-  }
+.carousel-item:nth-child(1) {
+    background-image: url('/media/cheerful-caucasian-young-lady-rejoices-received-gift-holding-box-hands-pink-background-girl-with-black-curly-hair-wears-white-sweater-concept-celebration-happiness-emotions_197531-30177.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
-  .carousel-item:nth-child(3) {
-      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-  }
+.carousel-item:nth-child(2) {
+    background-image: url('/media/cute-young-caucasian-girl-with-box-her-hands-anticipation-opening-it-indoors-brunette-with-curly-hair-white-sweater-birthday-concept_197531-30179.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
-  /* Height for devices larger than 576px */
-  @media (min-width: 992px) {
-      #introCarousel {
-          margin-top: -58.59px;
-      }
-  }
+.carousel-item:nth-child(3) {
+    background-image: url('/media/emotional-young-caucasian-woman-opens-box-with-unexpected-gift-keeps-mouth-open-curly-haired-brunette-with-loose-hair-sweater-positive-human-reactions-emotions_197531-30176.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
-  .navbar .nav-link {
-      color: #fff !important;
-  }
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+    #introCarousel {
+        margin-top: -58.59px;
+    }
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
