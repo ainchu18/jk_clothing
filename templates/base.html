@@ -47,6 +47,11 @@
         {% include 'includes/carousel.html' %}
     </header>
 
+    
+    {% block page_header %}
+    
+    {% endblock %}
+
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
