@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
+
 
 {% block content %}
 <div class="container mb-2">
@@ -40,7 +42,7 @@
                                     <p class="my-0">&euro;{{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
-                                    <form class="form update-form" method="POST" action="">
+                                    <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
@@ -70,11 +72,11 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link text-info"><small>Update</small></a>
-                                    <a class="remove-item text-danger float-end" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                                    <a class="update-total text-info"><small>Update</small></a>
+                                    <a class="remove-item text-danger float-end" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">&euro;{{ item.product.price }}</p>
+                                    <p class="my-0">&euro;{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -160,30 +162,30 @@
     {{ block.super }}
 
     <script type="text/javascript">
-        
+
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 
         // Update quantity on click
-        $('.update-link').click(function(e) {
+        $('.update-total').click(function(e) {
             var form = $(this).prev('.update-form');
             form.submit();
         })
 
         // Remove item and reload on click
         $('.remove-item').click(function(e) {
-            var csrfToken = "{{ csrf_token }}";
-            var itemId = $(this).attr('id').split('remove_')[1];
-            var size = $(this).data('size');
-            var url = `/bag/remove/${itemId}`;
-            var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('product_size');
+        var url = `/bag/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
 
-            $.post(url, data)
-            .done(function() {
-                location.reload();
-            });
-        })
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
 	</script>
     
     {% include 'products/includes/quantity_input_script.html' %}
