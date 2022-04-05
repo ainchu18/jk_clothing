@@ -32,9 +32,7 @@
                         By simply exploring our online shop and choose whatever clothes you want to mix and match, to match your current mood.
                     </p>
                     <div class="my-5">
-                        <h4>
-                            <a href="{% url 'products' %}" class="btn btn-pink btn-sm text-uppercase py-3">View Products</a>
-                        </h4>
+                        <a href="{% url 'products' %}" class="btn btn-pink btn-sm text-uppercase py-3">View Products</a>
                     </div>
             </div>
         </div>
@@ -56,7 +54,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Shop Products</h5>
                         <p class="card-text">
-                            In here you can shop all the products and put them in your basket ready to be delivered to your doorstep.
+                            In here you can view all the products and put them in your basket ready to be delivered to your doorstep.
                         </p>
                         <a href="{% url 'products' %}" class="btn btn-pink">Shop Now</a>
                     </div>
@@ -73,7 +71,7 @@
                         <p class="card-text">
                             In here you can view all the clothing available in this shop for you to mix and match.
                         </p>
-                        <a href="#!" class="btn btn-pink">View Clothing</a>
+                        <a href="{% url 'products' %}?category=activewear,essentials,jeans,shirts" class="btn btn-pink">View Clothing</a>
                     </div>
                 </div>
             </div>
@@ -92,7 +90,7 @@
                             In here you can check out all the special offers on this shop.
                             Huge discounts awaits.
                         </p>
-                        <a href="#!" class="btn btn-pink">View Special Offers</a>
+                        <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-pink">View Special Offers</a>
                     </div>
                 </div>
             </div>
