@@ -12,7 +12,9 @@
 {% block content %}
 <div class="container mt-5">
     <div class="row">
+        <hr>
         <h2 class="text-center">Product Details</h2>
+        <hr>
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if product.image %}
@@ -127,7 +129,7 @@
 
     <!-- Copyright -->
     <div class="text-center align-items-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2022 Copyright: JKCC1830<a href="#" class="float-end"><i class="fas fa-arrow-up fa-sm"></i></a>
+        © 2022 Copyright: JKCC1830
     </div>
     
     <!-- Copyright -->
@@ -136,6 +138,14 @@
 {% endblock %}
 
 {% block postload_js %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+
+    {{ block.super }}
+
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    {% include 'products/includes/quantity_input_script.html' %}
+    
 {% endblock %}

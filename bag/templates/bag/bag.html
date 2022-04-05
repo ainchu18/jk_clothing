@@ -2,6 +2,14 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block page_header %}
+
+    {% include 'includes/product.nav.html' %}
+
+    {% include 'includes/mobile.nav.html' %}
+
+{% endblock %}
+
 
 {% block content %}
 <div class="container mb-2">
@@ -163,9 +171,9 @@
 
     <script type="text/javascript">
 
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
 
         // Update quantity on click
         $('.update-total').click(function(e) {
