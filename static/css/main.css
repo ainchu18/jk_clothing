@@ -16,7 +16,7 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
+    background: rgb(222, 116, 134);
     color: #fff !important;
 }
 

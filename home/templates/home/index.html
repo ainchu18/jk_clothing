@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block page_header %}
+
+    {% include 'includes/main.nav.html' %}
+
+    {% include 'includes/mobile.nav.html' %}
+
+    {% include 'includes/carousel.html' %}
+
+{% endblock %}
+
 {% block content %}
-<div class="container">
+<div class="container mt-5">
     <!--Section: Content-->
     <section>
         <div class="row">
