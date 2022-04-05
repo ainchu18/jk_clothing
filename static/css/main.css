@@ -21,11 +21,20 @@ a.category-badge > span.badge:hover {
 }
 
 .btt-button {
-    height: 42px;
-    width: 42px;
+    height: 40px;
+    width: 40px;
     position: fixed;
     bottom: 10px;
     right: 10px;
+}
+
+.btn-pink {
+    background: rgb(222, 116, 134);
+    color: #fff;
+}
+
+.btn-pink:hover {
+    color: #000;
 }
 
 .btt-link,
@@ -72,4 +81,10 @@ a.category-badge > span.badge:hover {
 
 .navbar .nav-link {
     color: #fff !important;
+}
+
+.navbar:hover,
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #000 !important;
 }

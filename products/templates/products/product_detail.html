@@ -52,7 +52,7 @@
                         {% if s %}
                             <div class="col-12">
                                 <p><strong>Size:</strong></p>
-                                <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                <select class="form-control btn-pink rounded w-50" name="product_size" id='id_product_size'>
                                     <option value="xs">XS</option>
                                     <option value="s">S</option>
                                     <option value="m" selected>M</option>
@@ -66,7 +66,7 @@
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-primary rounded" 
+                                        <button class="decrement-qty btn btn-pink rounded" 
                                             data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
@@ -90,13 +90,13 @@
                         </div>
 
                         <div class="col{% if s %}-12 mt-2{% endif %}">
-                            <a href="{% url 'products' %}" class="btn border-dark rounded mt-5">
+                            <a href="{% url 'products' %}" class="btn btn-pink rounded mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-primary rounded text-uppercase mt-5" value="Add to Bag">
+                            <input type="submit" class="btn btn-pink rounded text-uppercase mt-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
@@ -113,15 +113,15 @@
 
     <div class="text-center py-4 align-items-center">
         <p>Follow us on social media</p>
-        <a href="https://www.youtube.com" class="btn btn-primary m-1" role="button"
+        <a href="https://www.youtube.com" class="btn btn-pink m-1" role="button"
             rel="nofollow" target="_blank">
             <i class="fab fa-youtube"></i>
         </a>
-        <a href="https://www.facebook.com" class="btn btn-primary m-1" role="button" rel="nofollow"
+        <a href="https://www.facebook.com" class="btn btn-pink m-1" role="button" rel="nofollow"
             target="_blank">
             <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://twitter.com" class="btn btn-primary m-1" role="button" rel="nofollow"
+        <a href="https://twitter.com" class="btn btn-pink m-1" role="button" rel="nofollow"
             target="_blank">
             <i class="fab fa-twitter"></i>
         </a>
@@ -131,7 +131,11 @@
     <div class="text-center align-items-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2022 Copyright: JKCC1830
     </div>
-    
+    <div class="btt-button shadow-sm rounded border">
+        <a class="btt-link btn-pink d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>	
+    </div>
     <!-- Copyright -->
 </footer>
 <!--Footer-->
