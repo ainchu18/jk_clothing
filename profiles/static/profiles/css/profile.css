@@ -1,0 +1,12 @@
+.text-pink {
+    color: rgb(222, 116, 134, .85);
+}
+
+.text-pink:hover {
+    color: #000;
+}
+
+.form-check-input:checked {
+    background-color: rgb(222, 116, 134, .85);
+    border: #aab7c4;
+}
