@@ -192,12 +192,21 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-7 text-right">
-            <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-pink rounded my-2">
-                <span class="icon mr-2">
-                    <i class="fas fa-gifts"></i>
-                </span>
-                <span class="text-uppercase">Now check out the latest deals!</span>
-            </a>
+            {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn btn-pink btn-sm float-end rounded my-4">
+                    <span class="icon mr-2">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to Profile</span>
+                </a>
+            {% else %}
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-pink btn-sm rounded float-end my-4">
+                    <span class="icon mr-2">
+                        <i class="fas fa-gifts"></i>
+                    </span>
+                    <span class="text-uppercase">Now check out the latest deals!</span>
+                </a>
+            {% endif %}
         </div>
     </div>
 </div>
@@ -234,5 +243,13 @@
     <!-- Copyright -->
 </footer>
 <!--Footer-->
+{% endblock %}
 
+{% block postload_js %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
 {% endblock %}
