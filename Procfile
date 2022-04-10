@@ -1,0 +1,1 @@
+web: gunicorn jk_clothing.wsgi:application
