@@ -145,6 +145,9 @@ a.category-badge > span.badge:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
 }
 
 .products-pic {
@@ -152,6 +155,9 @@ a.category-badge > span.badge:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
 }
 
 .clothing-pic {
@@ -159,6 +165,9 @@ a.category-badge > span.badge:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
 }
 
 .sales-pic {
