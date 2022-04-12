@@ -142,9 +142,6 @@ a.category-badge > span.badge:hover {
 
 .about-us {
     background-image: url('/media/about-us-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     max-width: 100%;
     height: auto;
     border-radius: 0.25rem;
@@ -152,9 +149,6 @@ a.category-badge > span.badge:hover {
 
 .products-pic {
     background-image: url('/media/products-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     max-width: 100%;
     height: auto;
     border-radius: 0.25rem;
@@ -162,9 +156,6 @@ a.category-badge > span.badge:hover {
 
 .clothing-pic {
     background-image: url('/media/clothing-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     max-width: 100%;
     height: auto;
     border-radius: 0.25rem;
@@ -172,9 +163,9 @@ a.category-badge > span.badge:hover {
 
 .sales-pic {
     background-image: url('/media/sale-2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
 }
 
 @media (min-width: 570px) {
