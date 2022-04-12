@@ -140,34 +140,6 @@ a.category-badge > span.badge:hover {
     background-position: center center;
 }
 
-.about-us {
-    background-image: url('/media/about-us-1.jpg');
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.25rem;
-}
-
-.products-pic {
-    background-image: url('/media/products-1.jpg');
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.25rem;
-}
-
-.clothing-pic {
-    background-image: url('/media/clothing-1.jpg');
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.25rem;
-}
-
-.sales-pic {
-    background-image: url('/media/sale-2.jpg');
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.25rem;
-}
-
 @media (min-width: 570px) {
     #introCarousel {
         margin-top: -58.59px;
