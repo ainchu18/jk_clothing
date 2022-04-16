@@ -9,6 +9,7 @@ JK Clothing is an online store where user and shoppers can view all the products
 ---
 
 ![App Image](media/home-page.png)
+![Responsive site example](jk-clothing/media/am_i_responsive/home.png)
 
 ---
 ## Table of Contents
@@ -113,17 +114,26 @@ I have structured the website into pages, each with clear, concise structure, in
 ![Landing page Image](media/home-page2.png)
 ![Landing page Image](media/home-page3.png)
 2. Register: This page allows the user to register an account
-![Landing page Image](media/sign-up.png)
+![Sign up Image](media/sign-up.png)
 3. Login: This page allows the user to login to the site
-![Landing page Image](media/login.png)
+![Sign in Image](media/login.png)
 4. Logout: This page allows the user to logout the site
-![Landing page Image](media/signout.png)
+![Sign out Image](media/signout.png)
 5. All products page: This page shows all the products available on the shop.
+![All product page Image](media/all-products.png)
 6. Product Details: This page shows the details of a specific product.
+![Product detail page Image](media/product-details.png)
 7. Clothing page: This page shows the clothing items on the shop.
-8. Hardware Page: This page shows all the hardware items on the shop.
+![Clothing page Image](media/clothing.png)
+8. Homeware Page: This page shows all the hardware items on the shop.
+![Homeware page Image](media/homeware.png)
 9. Special offers: This page shows all items that are on clearance and special offers/sale.
+![Special Offers page Image](media/deals.png)
 10. Profile: This page is where shoppers with a registered account can edit their profiles accordingly.
+![Profile page Image](media/profile.png)
 11. Product Management: This page allows the site owner to easily edit, add and delete items from the shop.
+![Product Mgt page Image](media/product-mgt.png)
 12. Shopping bag: This page shows all the items the shopper wants to buy.
+![Shopping bag page Image](media/bag.png)
 13. Checkout: This page is where users/shoppers put their payment details in order for them to purchase items from the shop.
+![Checkout page Image](media/checkout.png)

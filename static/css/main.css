@@ -20,6 +20,16 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.navbar:hover,
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #000 !important;
+}
+
 .btt-button {
     height: 40px;
     width: 40px;
@@ -146,12 +156,16 @@ a.category-badge > span.badge:hover {
     }
 }
 
-.navbar .nav-link {
-    color: #fff !important;
+@media only screen and (max-width: 995px) and (min-width: 576px) {
+    .navbar .nav-link {
+        color: #fff !important;
+        background-color: rgb(222, 116, 134);
+    }
+
+    .navbar:hover,
+    .nav-link:hover,
+    .navbar-brand:hover {
+        color: #000 !important;
+    }
 }
 
-.navbar:hover,
-.nav-link:hover,
-.navbar-brand:hover {
-    color: #000 !important;
-}
