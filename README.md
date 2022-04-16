@@ -9,7 +9,6 @@ JK Clothing is an online store where user and shoppers can view all the products
 ---
 
 ![App Image](media/home-page.png)
-![Responsive site example](jk-clothing/media/am_i_responsive/home.png)
 
 ---
 ## Table of Contents
@@ -137,3 +136,14 @@ I have structured the website into pages, each with clear, concise structure, in
 ![Shopping bag page Image](media/bag.png)
 13. Checkout: This page is where users/shoppers put their payment details in order for them to purchase items from the shop.
 ![Checkout page Image](media/checkout.png)
+
+---
+## Validation<a name=validation></a>
+### PEP8 Validation<a name=pep></a>
+* http://pep8online.com/ was use to validate the python code written. Result came back with warnings of line of code too long. I am not sure how to fix them without ruining the site or it might not work if I edit it. Will try and learn how to do this in the future as for now, due to time constraints, I will leave it be as it is not affecting the overall performance of the site.
+### HTML Validation
+* https://validator.w3.org/ was used to check the html files on this site. According to the site, there are 8 errors on this site. 6 of these said the duplicate id's, but when I checked the code, it says that I used duplicate id but this id was used for a dropdown options. 2 of these error said that form are not allowed to be a child of an ul. Tried to fix it but the overall look of the site change, so I kept it knowing and being aware of the error and will learn in the future not to do this. For now, due to time constraint, I will leave it be as the this error is not affecting the seach function of the site.
+### CSS Validation
+* https://jigsaw.w3.org/css-validator/ was used to check all the CSS files on this site. There were no errors or warnings found.
+### JS Validation
+* https://jshint.com was used to check the Javascript files used in this site. There were 5 warnings about template literal only available in ES6
