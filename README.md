@@ -83,7 +83,41 @@ JK Clothing is an online store where user and shoppers can view all the products
 * To be able to sort out products according to category, prices and alphabetical order.
 * To be able to search for products by name or description.
 * To easily select size and quantity of a product when purchasing.
+* To be able to see purchase history
 ### Site Owner Story<a name=site-owner></a>
-1. As the site owner, I want the user to get feedbacks or prompts in case user entered an invalid data.
+1. As the site owner, I want to be able to have an admin account so I can add, edit and delete products accordingly.
+2. As the site owner, I want to be able to see all the users that has registered for an account and all the orders that has been done on the shop.
 
 ---
+## Technologies Used<a name=technology></a>
+### Languages<a name=languages></a>
+* Python
+* HTML
+* CSS
+* Javascript
+
+### Framework and Tools<a name=frameworks></a>
+* Bootstrap5 - for the site design on desktop and mobile to be responsive.
+* Fontawesome - for the overall font for the site
+* Github - used for storing the code for the site in a repositoty so other developers can see, fork and check it out.
+* Gitpod - the IDE used when developing the site
+* AWS-S3 - where all the static and media files are stored
+* Stripe - the payment system used when checking out
+* Heroku - where the app is deployed
+---
+## Features
+### Website Pages
+I have structured the website into pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design.
+1. Home/Landing Page: This is the landing page, and the first page the user encounters when they access the site, before they log in/register
+2. Register: This page allows the user to register an account
+3. Login: This page allows the user to login to the site
+4. Logout: This page allows the user to logout the site
+5. All products page: This page shows all the products available on the shop.
+6. Product Details: This page shows the details of a specific product.
+7. Clothing page: This page shows the clothing items on the shop.
+8. Hardware Page: This page shows all the hardware items on the shop.
+9. Special offers: This page shows all items that are on clearance and special offers/sale.
+10. Profile: This page is where shoppers with a registered account can edit their profiles accordingly.
+11. Product Management: This page allows the site owner to easily edit, add and delete items from the shop.
+12. Shopping bag: This page shows all the items the shopper wants to buy.
+13. Checkout: This page is where users/shoppers put their payment details in order for them to purchase items from the shop.
