@@ -108,10 +108,16 @@ JK Clothing is an online store where user and shoppers can view all the products
 ## Features
 ### Website Pages
 I have structured the website into pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design.
-1. Home/Landing Page: This is the landing page, and the first page the user encounters when they access the site, before they log in/register
+1. Home/Landing Page: This is the landing page, and the first page the user encounters when they access the site, before they log in/register. This uses a carousel template with some changes from bootstrap5.
+![Landing page Image](media/home-page.png)
+![Landing page Image](media/home-page2.png)
+![Landing page Image](media/home-page3.png)
 2. Register: This page allows the user to register an account
+![Landing page Image](media/sign-up.png)
 3. Login: This page allows the user to login to the site
+![Landing page Image](media/login.png)
 4. Logout: This page allows the user to logout the site
+![Landing page Image](media/signout.png)
 5. All products page: This page shows all the products available on the shop.
 6. Product Details: This page shows the details of a specific product.
 7. Clothing page: This page shows the clothing items on the shop.
