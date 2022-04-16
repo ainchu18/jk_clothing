@@ -159,6 +159,9 @@ a.category-badge > span.badge:hover {
 @media only screen and (max-width: 995px) and (min-width: 576px) {
     .navbar .nav-link {
         color: #fff !important;
+    }
+
+    nav {
         background-color: rgb(222, 116, 134);
     }
 
