@@ -72,7 +72,7 @@ JK Clothing is an online store where user and shoppers can view all the products
 * Easily create an account with email verification.
 * Easiyly view all the products and have prompts to easily know whats happening or what has been done.
 
-### User Stories<a name=user-stories></a>
+### User/Shopper Stories<a name=user-stories></a>
 * To be able to view all products and each individual products with its details.
 * To quickly identify special offers and clearance items.
 * To be able to create an account, log in and log out with email verifications to ensure safety of account.
@@ -136,6 +136,8 @@ I have structured the website into pages, each with clear, concise structure, in
 ![Shopping bag page Image](media/bag.png)
 13. Checkout: This page is where users/shoppers put their payment details in order for them to purchase items from the shop.
 ![Checkout page Image](media/checkout.png)
+14. Reset Password: This page is where users/shoppers go to reset their password if they forgot it.
+![Checkout page Image](media/reset.png)
 
 ---
 ## Validation<a name=validation></a>
@@ -148,4 +150,39 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 * https://jigsaw.w3.org/css-validator/ was used to check all the CSS files on this site. There were no errors or warnings found.
 ### JS Validation
 * https://jshint.com was used to check the Javascript files used in this site. There were 5 warnings about template literal only available in ES6
-## User Stories Testing<a name=stories></a>
+## User/Shopper Stories Testing<a name=stories></a>
+1. To be able to view all products and each individual products with its details.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Products page | When you opened the app, and click on the all products option a dropdown will show and click all products. Click on the picture of the product and will show the product details.   | Worked    |
+
+2. To quickly identify special offers and clearance items.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Special offers page | When you opened the app, and click on the special offers option a dropdown will show for all the special offers, sale and clearance products.  | Worked    |
+
+3. To be able to create an account, log in and log out with email verifications to ensure safety of account.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| My account page | When you opened the app, and click on the my account option a dropdown will show to either log in or sign up.  | Worked    |
+
+4. * To be able to securely checkout when purchasing items from the shop
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Checkout page | When you opened the app, and chose an item to add in your bag, and select checkout button. | Worked    |
+
+5. To easily recover password in case users forgot it.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Reset Password page | When you forgot your password when logging in, choose the forgot password option and enter your email and reset password email will be sent. | Worked    |
+
+6. To have a personalized user profile after registering for an account. 
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Profile page | When you successfully create an account you can customized and view your user profile in the profile page. | Worked    |
