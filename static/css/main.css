@@ -162,7 +162,7 @@ a.category-badge > span.badge:hover {
     }
 
     nav {
-        background-color: rgb(222, 116, 134);
+        background-color: rgb(222, 116, 134) !important;
     }
 
     .navbar:hover,

@@ -148,3 +148,4 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 * https://jigsaw.w3.org/css-validator/ was used to check all the CSS files on this site. There were no errors or warnings found.
 ### JS Validation
 * https://jshint.com was used to check the Javascript files used in this site. There were 5 warnings about template literal only available in ES6
+## User Stories Testing<a name=stories></a>
