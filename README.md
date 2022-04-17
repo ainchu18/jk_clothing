@@ -244,3 +244,50 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 * Initially, when going to product details if the item has sizes, there will be an option to select the specific size you want, but recently when I was doing the readme, I noticed that its not showing anymore. At the moment, I tried fixing it, but to no avail. I will try and fix this in the future but for now, I have no time to do so.
 
 ---
+## Depolyment<a name=deployment></a>
+### The website was deployed using Heroku by following these steps:
+
+1. Use the "pip3 freeze > requirements.txt" command in the terminal to save any libraries that need to be installed in the file.
+2. Login or create a Heroku account
+3. Click the "new" button in the upper right corner and select "create new app".
+4. Choose an app name and your region and click "Create app".
+5. Go to the "settings" tab, add the python build pack and then the node.js build pack and add all the variables needed for the site.
+6. Go to the "deploy" tab and pick GitHub as a deployment method.
+7. Search for a repository to connect to
+8. Click enable automatic deploys and then deploy branch
+9. Wait for the app to build and then click on the "View" link.
+
+### You can fork the repository by following these steps:
+
+1. Go to the GitHub repository.
+2. Click on the Fork button in the upper right-hand corner.
+
+### You can clone the repository by following these steps:
+
+1. Go to the GitHub repository
+2. Locate the Code button above the list of files and click it
+3. Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard.
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory.
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone.
+
+---
+## Credits<a name=credits></a>
+* Making this app was inspired by the Boutique Ado project provided by the Code institute.
+### Code
+* The codes were based and modified from the Boutique Ado project of the Code institute.
+* Django documentations
+* Stripe documentations
+### Images
+* The images used in this site was from the Boutique Ado project by the Code institute and unsplash.com for the photos for the home page.
+### Overall UI
+* This was inspired by the carousel template in bootstrap with some modifications.
+
+---
+## Acknoledgements<a name=acknowledgement></a>
+### I would like to take this opportunity to thank:
+* Code institute for the tutorial on how python works.
+* Google
+* Youtube
+* Lastly, I would like to thank JK, you know who you are. Thanks for the advice, for cheering me up when I'm stressed out and thank you for your belief in me that I can do this course and succeed.
