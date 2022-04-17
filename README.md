@@ -295,7 +295,7 @@ This section shows the fake social media groups and accounts I made just for the
 ### Images
 * The images used in this site was from the Boutique Ado project by the Code institute and unsplash.com for the photos for the home page.
 ### Overall UI
-* This was inspired by the carousel template in bootstrap and mdb bootstrap with some modifications.
+* This was inspired by the carousel template in bootstrap with some modifications.
 
 ---
 ## Acknoledgements<a name=acknowledgement></a>
@@ -306,5 +306,5 @@ This section shows the fake social media groups and accounts I made just for the
 * Lastly, I would like to thank JK, you know who you are. Thanks for the advice, for cheering me up when I'm stressed out and thank you for your belief in me that I can do this course and succeed.
 
 ## Notice and Plans for the Future
-There are still plenty of things to be improved on this site. Tried testing the site using the chrome dev tools lighthouse and WAVS and the site needs plenty of improvements with regards to accessibility, contrast of colors, color scheme, and some minor coding issues. Due to lack of time and unforseen circumstances, I would like to apologize for this project for it not being up to the best standard of coding. Will do my best in the future to improve and fix this.
-There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a function that will sort out the items from male and female items. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. I did my best to do this site eventhough there are more things to improve. I would appreciate it if you suggest anything that needs to be done after assessing this project. Thanks
+There are still plenty of things to be improved on this site. Tried testing the site using the chrome dev tools lighthouse and WAVS and the site needs plenty of improvements with regards to accessibility, contrast of colors, color scheme, and some coding issues that for now I have no time to fix. Due to lack of time and unforseen circumstances, I would like to apologize for this project for it not being up to the best standard. Will do my best in the future to improve and fix this.
+There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a function that will sort out the items from male and female items. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. I did my best to do this site eventhough there are more things to improve. Lastly, incorporate proper responsiveness on tablet devices which I tried to fixed but still doesnt look good. Would gladly appreciate any suggestions to improve this site. Thanks and Happy Easter!
