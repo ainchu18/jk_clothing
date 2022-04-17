@@ -239,6 +239,12 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 | :------------- | :----------: | -----------: |
 | Product Management | When the site owner has a admin account access, he or she will be able to add, edit, delete products on the product management option or when logged in as a owner and validated superuser, all the items will have an edit or delete options on them.   | Worked    |
 
+2. As the site owner, I want to be able to see all the users that has registered for an account and all the orders that has been done on the shop.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Admin Page | This is possible when you add /admin to the website url, and enter your admin login. Tested using the superuser I made.   | Worked    |
+
 ---
 ## Bugs<a name=bugs></a>
 * Initially, when going to product details if the item has sizes, there will be an option to select the specific size you want, but recently when I was doing the readme, I noticed that its not showing anymore. At the moment, I tried fixing it, but to no avail. I will try and fix this in the future but for now, I have no time to do so.
@@ -287,7 +293,11 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 ---
 ## Acknoledgements<a name=acknowledgement></a>
 ### I would like to take this opportunity to thank:
-* Code institute for the tutorial on how python works.
+* Code institute for the tutorial on how python-django works.
 * Google
 * Youtube
 * Lastly, I would like to thank JK, you know who you are. Thanks for the advice, for cheering me up when I'm stressed out and thank you for your belief in me that I can do this course and succeed.
+
+## Notice and Plans for the Future
+There are still plenty of things to be improved on this site. Tried testing the site using the chrome dev tools lighthouse and WAVS and the site needs plenty of improvements with regards to accessibility, contrast of colors, color scheme, and some minor coding issues. Due to lack of time and unforseen circumstances, I would like to apologize for this project for it not being up to the best standard of coding. Will do my best in the future to improve and fix this.
+There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a function that will sort out the items from male and female items. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. I did my best to do this site eventhough there are more things to improve. I would appreciate it if you suggest anything that needs to be done after assessing this project. Thanks
