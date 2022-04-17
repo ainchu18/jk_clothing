@@ -108,6 +108,7 @@ JK Clothing is an online store where user and shoppers can view all the products
 * HTML
 * CSS
 * Javascript
+* Heroku-Postgres
 
 ### Framework and Tools<a name=frameworks></a>
 * Bootstrap5 - for the site design on desktop and mobile to be responsive.
@@ -294,7 +295,7 @@ This section shows the fake social media groups and accounts I made just for the
 ### Images
 * The images used in this site was from the Boutique Ado project by the Code institute and unsplash.com for the photos for the home page.
 ### Overall UI
-* This was inspired by the carousel template in bootstrap with some modifications.
+* This was inspired by the carousel template in bootstrap and mdb bootstrap with some modifications.
 
 ---
 ## Acknoledgements<a name=acknowledgement></a>
