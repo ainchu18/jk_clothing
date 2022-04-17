@@ -54,8 +54,8 @@
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
-                        {% with product.has_sizes as s %}
-                        {% if s %}
+                        {% with product.has_sizes as x %}
+                        {% if x %}
                             <div class="col-12">
                                 <p><strong>Size:</strong></p>
                                 <select class="form-control btn-pink rounded w-50" name="product_size" id='id_product_size'>

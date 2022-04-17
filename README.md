@@ -25,13 +25,26 @@ JK Clothing is an online store where user and shoppers can view all the products
     * [Languages](#languages)
     * [Frameworks and Tools](#frameworks)
 4. [Features](#features)
-    * [Get Monthly Expenses Data](#get-monthly)
-    * [Check Values Entered](#check)
-    * [Amend Worksheets](#amend)
-    * [Calculate Loss or Savings](#loss-savings)
-    * [Calculate and Adjust Budget for the Next Month](#budget)
+    * [Home Page](#home)
+    * [Register Page](#register)
+    * [Login Page](#login)
+    * [Logout Page](#logout)
+    * [All Products Page](#all-products)
+    * [Product Details Page](#product-details)
+    * [Clothing Page](#clothing)
+    * [Homeware Page](#homeware)
+    * [Special Offers Page](#specials)
+    * [Profile Page](#profile)
+    * [Product Management Page](#management)
+    * [Shopping Bag Page](bag)
+    * [Checkout Page](#checkout)
+    * [Reset Password Page](#reset)
+    * [Explore the site](#search)
 5. [Validation](#validation)
     * [PEP8 Validation](#pep)
+    * [HTML Validation](#html)
+    * [CSS Validation](#css)
+    * [Javascript Validation](#js)
     * [User Stories Testing](#stories)
     * [Site Owner Story Testing](#owner)
 6. [Bugs](#bugs)
@@ -91,7 +104,7 @@ JK Clothing is an online store where user and shoppers can view all the products
 ---
 ## Technologies Used<a name=technology></a>
 ### Languages<a name=languages></a>
-* Python
+* Python-Django
 * HTML
 * CSS
 * Javascript
@@ -107,48 +120,50 @@ JK Clothing is an online store where user and shoppers can view all the products
 ---
 ## Features
 ### Website Pages
-I have structured the website into pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design.
-1. Home/Landing Page: This is the landing page, and the first page the user encounters when they access the site, before they log in/register. This uses a carousel template with some changes from bootstrap5.
+The website is structured into pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design.
+1. Home/Landing Page<a name=home></a>: This is the landing page, and the first page the user encounters when they access the site, before they log in/register. This uses a carousel template with some changes from bootstrap5.
 ![Landing page Image](media/home-page.png)
 ![Landing page Image](media/home-page2.png)
 ![Landing page Image](media/home-page3.png)
-2. Register: This page allows the user to register an account
+2. Register<a name=register></a>: This page allows the user to register an account
 ![Sign up Image](media/sign-up.png)
-3. Login: This page allows the user to login to the site
+3. Login<a name=login></a>: This page allows the user to login to the site
 ![Sign in Image](media/login.png)
-4. Logout: This page allows the user to logout the site
+4. Logout<a name=logout></a>: This page allows the user to logout the site
 ![Sign out Image](media/signout.png)
-5. All products page: This page shows all the products available on the shop.
+5. All products<a name=all-products></a>: This page shows all the products available on the shop.
 ![All product page Image](media/all-products.png)
-6. Product Details: This page shows the details of a specific product.
+6. Product Details<a name=product-details></a>: This page shows the details of a specific product.
 ![Product detail page Image](media/product-details.png)
-7. Clothing page: This page shows the clothing items on the shop.
+7. Clothing page<a name=clothing></a>: This page shows the clothing items on the shop.
 ![Clothing page Image](media/clothing.png)
-8. Homeware Page: This page shows all the hardware items on the shop.
+8. Homeware Page<a name=homeware></a>: This page shows all the hardware items on the shop.
 ![Homeware page Image](media/homeware.png)
-9. Special offers: This page shows all items that are on clearance and special offers/sale.
+9. Special offers<a name=specials></a>: This page shows all items that are on clearance and special offers/sale.
 ![Special Offers page Image](media/deals.png)
-10. Profile: This page is where shoppers with a registered account can edit their profiles accordingly.
+10. Profile<a name=profile></a>: This page is where shoppers with a registered account can edit their profiles accordingly.
 ![Profile page Image](media/profile.png)
-11. Product Management: This page allows the site owner to easily edit, add and delete items from the shop.
+11. Product Management<a name=management></a>: This page allows the site owner to easily edit, add and delete items from the shop.
 ![Product Mgt page Image](media/product-mgt.png)
-12. Shopping bag: This page shows all the items the shopper wants to buy.
+12. Shopping bag<a name=bag></a>: This page shows all the items the shopper wants to buy.
 ![Shopping bag page Image](media/bag.png)
-13. Checkout: This page is where users/shoppers put their payment details in order for them to purchase items from the shop.
+13. Checkout<a name=checkout></a>: This page is where users/shoppers put their payment details in order for them to purchase items from the shop.
 ![Checkout page Image](media/checkout.png)
-14. Reset Password: This page is where users/shoppers go to reset their password if they forgot it.
+14. Reset Password<a name=reset></a>: This page is where users/shoppers go to reset their password if they forgot it.
 ![Checkout page Image](media/reset.png)
+15. Search or explore the site<a name=search></a>: This page is where users/shoppers go to search for items vie name or description.
+![Search or Explore the site Image](media/search.jpg)
 
 ---
 ## Validation<a name=validation></a>
 ### PEP8 Validation<a name=pep></a>
 * http://pep8online.com/ was use to validate the python code written. Result came back with warnings of line of code too long. I am not sure how to fix them without ruining the site or it might not work if I edit it. Will try and learn how to do this in the future as for now, due to time constraints, I will leave it be as it is not affecting the overall performance of the site.
 On one hand, with regards to Unitest, I am still not sure how to do this so I wasnt able to include any of these in the code. Will learn about this more in the future when I have more time to focus on it.
-### HTML Validation
+### HTML Validation<a name=html></a>
 * https://validator.w3.org/ was used to check the html files on this site. According to the site, there are 8 errors on this site. 6 of these said the duplicate id's, but when I checked the code, it says that I used duplicate id but this id was used for a dropdown options. 2 of these error said that form are not allowed to be a child of an ul. Tried to fix it but the overall look of the site change, so I kept it knowing and being aware of the error and will learn in the future not to do this. For now, due to time constraint, I will leave it be as the this error is not affecting the seach function of the site.
-### CSS Validation
+### CSS Validation<a name=css></a>
 * https://jigsaw.w3.org/css-validator/ was used to check all the CSS files on this site. There were no errors or warnings found.
-### JS Validation
+### JS Validation<a name=js></a>
 * https://jshint.com was used to check the Javascript files used in this site. There were 5 warnings about template literal only available in ES6
 ## User/Shopper Stories Testing<a name=stories></a>
 1. To be able to view all products and each individual products with its details.
@@ -186,3 +201,33 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 | Feature      | Action    | Result    |
 | :------------- | :----------: | -----------: |
 | Profile page | When you successfully create an account you can customized and view your user profile in the profile page. | Worked    |
+
+7. To easily view all the items in the shopping bag.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Checkout or Shopping Bag Page | There are two ways to see all the items you put in your bag. One, is to click onto the basket icon on the upper right hand side, and second is when you are checking out, you will see a preview of all the items you ordered. | Worked    |
+
+8. To be able to sort out products according to category, prices, ratings and alphabetical order.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| All Products Page | After clicking the all products options, you will see a dropdown option where you can sort items according to their category, price, rating and name. | Worked    |
+
+9. To be able to search for products by name or description.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Search/Explore our site  | You can see this on the upper right hand side of the site where you can type in keywords and description and products with said desctiption or name will show on the screen. | Worked    |
+
+10. * To easily select size and quantity of a product when purchasing.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Product Details Page  | When you clicked onto one item, it will bring you to the product details page, where you can select sizes if available for that item and the quantity you want to buy. | Worked    |
+
+11. * To be able to see purchase history
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Profile Page  | When you have an account and use it to purchase multiple times on the shop, when you go to your profile page, it will show your purchase history. | Worked    |
