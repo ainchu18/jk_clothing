@@ -250,6 +250,12 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 * Initially, when going to product details if the item has sizes, there will be an option to select the specific size you want, but recently when I was doing the readme, I noticed that its not showing anymore. At the moment, I tried fixing it, but to no avail. I will try and fix this in the future but for now, I have no time to do so.
 
 ---
+## Mock up social media product page
+This section shows the fake social media groups and accounts I made just for the site. You can access this by pressing onto the social media icon on the footer area and it will redirect you to the said pages.
+![Footer and Social media image](media/footer.png)
+![Fake Facebook image](media/fb.png)
+![Fake Twitter image](media/twitter.png)
+![Fake Youtube image](media/yt.png)
 ## Depolyment<a name=deployment></a>
 ### The website was deployed using Heroku by following these steps:
 
