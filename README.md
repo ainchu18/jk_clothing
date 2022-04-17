@@ -231,3 +231,16 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 | Feature      | Action    | Result    |
 | :------------- | :----------: | -----------: |
 | Profile Page  | When you have an account and use it to purchase multiple times on the shop, when you go to your profile page, it will show your purchase history. | Worked    |
+
+### Site Owner Story Testing<a name=owner></a>
+1. As the site owner, I want to be able to have an admin account so I can add, edit and delete products accordingly.
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Product Management | When the site owner has a admin account access, he or she will be able to add, edit, delete products on the product management option or when logged in as a owner and validated superuser, all the items will have an edit or delete options on them.   | Worked    |
+
+---
+## Bugs<a name=bugs></a>
+* Initially, when going to product details if the item has sizes, there will be an option to select the specific size you want, but recently when I was doing the readme, I noticed that its not showing anymore. At the moment, I tried fixing it, but to no avail. I will try and fix this in the future but for now, I have no time to do so.
+
+---
