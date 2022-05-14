@@ -109,6 +109,8 @@ JK Clothing is an online store where user and shoppers can view all the products
 * CSS
 * Javascript
 * Heroku-Postgres
+* Mailchimp
+* XML sitemaps
 
 ### Framework and Tools<a name=frameworks></a>
 * Bootstrap5 - for the site design on desktop and mobile to be responsive.
