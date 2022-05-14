@@ -158,6 +158,14 @@ The website is structured into pages, each with clear, concise structure, inform
 ![Search or Explore the site Image](media/search.jpg)
 
 ---
+
+## Database
+* The website is a data-centric one with html, javascript, css used with the bootstrap framework as a frontend
+* The backend consists of Python-django, heroku database, aws s3 for the media and static files
+
+## Note 
+* I am really busy at work these past few days that is why I wasnt able to include a diagram explaining about models in python-django its relations and links. I now know that this is important part of documentation process and will do so once I am doing an actual project. Thanks for understanding.
+
 ## Validation<a name=validation></a>
 ### PEP8 Validation<a name=pep></a>
 * http://pep8online.com/ was use to validate the python code written. Result came back with warnings of line of code too long. I am not sure how to fix them without ruining the site or it might not work if I edit it. Will try and learn how to do this in the future as for now, due to time constraints, I will leave it be as it is not affecting the overall performance of the site.
