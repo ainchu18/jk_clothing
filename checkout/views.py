@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
 
 import stripe
 
@@ -145,7 +147,20 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-
+    cust_email = order.email
+    
+    body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+    email = EmailMessage(
+            'Thank you for purchasing!',
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email],
+        )
+    email.fail_silently = False
+    email.send()
+  
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
@@ -170,6 +185,8 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+    email.fail_silently = False
+    email.send()
 
     if 'bag' in request.session:
         del request.session['bag']
