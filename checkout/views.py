@@ -149,7 +149,7 @@ def checkout_success(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
     cust_email = order.email
     body = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_body.txt',
+            'checkout/confirmation_emails/confirmation_email_body.html',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
     email = EmailMessage(
             'Thank you for purchasing!',
