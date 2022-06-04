@@ -2,7 +2,7 @@ import json
 import time
 
 from django.http import HttpResponse
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.conf import settings
 
@@ -26,13 +26,13 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        send_mail(
+        message_email = EmailMessage(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email],
-            fail_silently = False,
         )
+        message_email.send(fail_silently=False)
 
     def handle_event(self, event):
         """
