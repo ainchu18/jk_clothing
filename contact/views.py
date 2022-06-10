@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import Contact
 from django.contrib import messages
+from .models import Contact
 
 
-def contactForm(request):
+def contact_form(request):
+    """A view where users/shoppers can leave a comment or questions"""
 
     if request.method == 'POST':
         contact = Contact()
