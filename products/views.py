@@ -3,9 +3,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, ReviewRating
 
-from .forms import ProductForm
+from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -67,6 +67,31 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def submit_review(request, product_id):
+    url = request.META.get('HTTP_REFERER')
+    if request.method == 'POST':
+        try:
+            reviews = ReviewRating.objects.get(pk=product_id)
+            form = ReviewForm(request.POST, instance=reviews)
+            form.save()
+            messages.success(request, 'Your review has been updated!')
+            return redirect(url)
+
+        except ReviewRating.DoesNotExist:
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                data = ReviewRating()
+                data.subject = form.cleaned_data['subject']
+                data.rating = form.cleaned_data['rating']
+                data.review = form.cleaned_data['review']
+                data.product_id = product_id
+                data.user_id = request.user.id
+                data.save()
+
+                messages.success(request, 'Your review has been posted!')
+                return redirect(url)
 
 
 @login_required

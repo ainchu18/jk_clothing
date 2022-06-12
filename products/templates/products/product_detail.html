@@ -136,7 +136,7 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="my-5">
-                <form action="" method="POST">
+                <form action="{% url 'submit_review' product.id %}" method="POST">
                     {% csrf_token %}
                     <h5>Write your review here</h5>
                     <div>
@@ -171,7 +171,11 @@
                         Review:
                         <textarea name="review" rows="3" class="form-control"></textarea>
                         <br>
+                        {% if request.user.is_authenticated %}
                         <input type="submit" value="Submit Review" class="btn btn-pink btn-sm">
+                        {% else %}
+                        <p>You must be logged in to post a review and rating. <span><a href="{% url 'account_login' %}">Login now</a></span></p>
+                        {% endif%}
                     </div>
                 </form>
             </div>
