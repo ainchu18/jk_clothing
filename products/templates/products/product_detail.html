@@ -174,7 +174,7 @@
                         {% if request.user.is_authenticated %}
                         <input type="submit" value="Submit Review" class="btn btn-pink btn-sm">
                         {% else %}
-                        <p>You must be logged in to post a review and rating. <span><a href="{% url 'account_login' %}">Login now</a></span></p>
+                        <p>You must have an account to post a review or rating. <span><a href="{% url 'account_signup' %}">Signup now</a></span></p>
                         {% endif%}
                     </div>
                 </form>
