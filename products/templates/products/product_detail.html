@@ -116,22 +116,21 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="my-5">
                 <h5>Customer Reviews</h5>
+                {% for review in reviews %}
                 <article class="box mb-3">
                     <div class="icontext w-100">
                         <div class="text">
-                            <span class="date text-muted float-md-right">20.20.2022</span>
-                            <h6 class="mb-1">Mike Jordan</h6>
+                            <span class="date text-muted float-md-right">{{ review.created_at }}</span>
+                            <h6 class="mb-1">{{ review.user.username }}</h6>
                         </div>
                     </div>
                     <div class="mt-3">
                         <p>
-                            Sample review from a sample user. here hereh here
-                            Sample review from a sample user. here hereh here
-                            Sample review from a sample user. here hereh here
-                            Sample review from a sample user. here hereh here
+                            {{ review.review }}
                         </p>
                     </div>
                 </article>
+                {% endfor %}
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
