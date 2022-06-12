@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+
+{% include 'includes/product.nav.html' %}
+
+{% include 'includes/mobile.nav.html' %}
+
+{% endblock %}
+
+
+{% block content %}
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Wishlist</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+
+    </div>
+</div>
+
+{% include 'includes/footer.html' %}
+
+{% endblock %}
+
+{% block postload_js %}
+
+{{ block.super }}
+
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+
+</script>
+
+
+{% endblock %}
