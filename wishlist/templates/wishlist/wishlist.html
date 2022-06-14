@@ -54,14 +54,19 @@
                                 </td>
                         
                                 <td class="py-3">
-                                    <input type="hidden" class="prod_id" value="{{wl.product_id}}">
+                                    <input type="hidden" class="prod_id" value="{{wl.product.id}}">
                                     {% csrf_token %}
-                                    <a href="{% url 'product_detail' wl.product.id %}" class="btn btn-pink btn-sm rounded">View product</a>
+                                    <a href="{% url 'product_detail' wl.product.id %}" class="btn btn-pink btn-sm rounded">
+                                        <span><i class="fa fa-eye"></i></span>
+                                        View product
+                                    </a>
                                 </td>
                                 <td class="py-3">
-                                    <input type="hidden">
+                                    <form action="">
+                                    <input type="hidden" class="prod_id" value="{{wl.product_id}}">
                                     {% csrf_token %}
-                                    <a href="" class="btn btn-pink btn-sm rounded">Delete from wishlist</a>
+                                    <input type="text" value="Remove from wishlist" class="btn btn-sm btn-pink rounded">
+                                    </form>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -98,20 +103,6 @@
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
-
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var url = `/bag/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
-
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
-
 </script>
 
 
