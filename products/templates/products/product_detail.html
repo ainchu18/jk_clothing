@@ -110,7 +110,7 @@
                     </div>
                 </form>
                 {% if user.is_authenticated %}
-                <a href="{% url 'view_wishlist' %}" class="btn btn-pink btn-sm rounded mt-2 add-wishlist" data-product="{{ product.id }}">
+                <a href="{% url 'product_detail' product.id %}" class="btn btn-pink btn-sm rounded mt-2 add-wishlist" data-product="{{ product.id }}">
                     <span><i class='fa fa-heart'></i> Add to Wishlist</span>
                 </a>
                 {% else %}
@@ -214,8 +214,9 @@
                 product:pid
             },
             dataType:'json',
-            success:function(res){
-                if (res.bool==true) {
+            success:function(response){
+                alertify.success(response.status);
+                if (response.bool==true) {
                     dsble.addClass('disabled').removeClass('.add-wishlist');
                 }
             }

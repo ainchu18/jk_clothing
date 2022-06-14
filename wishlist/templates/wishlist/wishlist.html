@@ -31,6 +31,7 @@
                                 <th scope="col"></th>
                                 <th scope="col">Price</th>
                                 <th scope="col"></th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
 
@@ -51,12 +52,16 @@
                                 <td class="py-3">
                                     <p class="my-0">&euro;{{ wl.product.price }}</p>
                                 </td>
+                        
                                 <td class="py-3">
-                                    <form class="form" action="{% url 'view_wishlist' %}" method="POST">
-                                        {% csrf_token %}
-                                        <a class="btn btn-pink btn-sm rounded" href="#">Add to Bag</a>
-                                    </form>
-                                    
+                                    <input type="hidden" class="prod_id" value="{{wl.product_id}}">
+                                    {% csrf_token %}
+                                    <a href="{% url 'product_detail' wl.product.id %}" class="btn btn-pink btn-sm rounded">View product</a>
+                                </td>
+                                <td class="py-3">
+                                    <input type="hidden">
+                                    {% csrf_token %}
+                                    <a href="" class="btn btn-pink btn-sm rounded">Delete from wishlist</a>
                                 </td>
                             </tr>
                         {% endfor %}
