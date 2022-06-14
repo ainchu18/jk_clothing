@@ -52,8 +52,11 @@
                                     <p class="my-0">&euro;{{ wl.product.price }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <a class="btn btn-pink btn-sm rounded" href="#">Add to Bag</a>
-                                    <a class="remove-item text-danger float-end" id="remove_{{ wl.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                    <form class="form" action="{% url 'view_wishlist' %}" method="POST">
+                                        {% csrf_token %}
+                                        <a class="btn btn-pink btn-sm rounded" href="#">Add to Bag</a>
+                                    </form>
+                                    
                                 </td>
                             </tr>
                         {% endfor %}
