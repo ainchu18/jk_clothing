@@ -110,7 +110,7 @@
                     </div>
                 </form>
                 {% if user.is_authenticated %}
-                <a href="#" class="btn btn-pink btn-sm rounded mt-2 add-wishlist" data-product="{{ product.id }}">
+                <a href="{% url 'view_wishlist' %}" class="btn btn-pink btn-sm rounded mt-2 add-wishlist" data-product="{{ product.id }}">
                     <span><i class='fa fa-heart'></i> Add to Wishlist</span>
                 </a>
                 {% else %}
@@ -207,6 +207,7 @@
     })
     $(document).on('click', ".add-wishlist", function() {
         var pid = $(this).attr('data-product');
+        var dsble = $(this);
         $.ajax({
             url:"/wishlist/add-wishlist",
             data:{
@@ -214,7 +215,9 @@
             },
             dataType:'json',
             success:function(res){
-                console.log(res);
+                if (res.bool==true) {
+                    dsble.addClass('disabled').removeClass('.add-wishlist');
+                }
             }
         })
     })

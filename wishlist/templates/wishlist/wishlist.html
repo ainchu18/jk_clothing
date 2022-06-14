@@ -21,7 +21,60 @@
     </div>
 
     <div class="row">
+        <div class="col">
+            {% if wlist%}
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
 
+                        {% for wl in wlist %}
+                            <tr>
+                                <td class="p-3 w-25">
+                                    {% if wl.product.image %}
+                                    <img class="img-fluid rounded" src="{{ wl.product.image.url }}" alt="{{ wl.product.name }}">
+                                    {% else %}
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ wl.product.name }}">
+                                    {% endif %}
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0"><strong>{{ wl.product.name }}</strong></p>
+                                    <p class="my-0"><strong>Size: </strong>{% if wl.product.has_sizes %}{{ wl.size|upper }}{% else %}N/A{% endif %}</p>
+                                    <p class="my-0 small text-muted">SKU: {{ wl.product.sku|upper }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">&euro;{{ wl.product.price }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <a class="btn btn-pink btn-sm rounded" href="#">Add to Bag</a>
+                                    <a class="remove-item text-danger float-end" id="remove_{{ wl.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <a href="{% url 'products' %}" class="btn btn-pink rounded btn-sm">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Browse our products</span>
+                    </a>
+                </div>
+            {% else %}
+                <p class="lead mb-5">Your wishlist is empty.</p>
+                <a href="{% url 'products' %}" class="btn btn-pink rounded btn-sm">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Browse our products</span>
+                </a>
+            {% endif %}
+        </div>
     </div>
 </div>
 
@@ -36,6 +89,19 @@
 <script type="text/javascript">
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
+    })
+
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('product_size');
+        var url = `/bag/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
     })
 
 </script>
