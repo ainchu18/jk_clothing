@@ -72,6 +72,7 @@ def product_detail(request, product_id):
 
 
 def submit_review(request, product_id):
+    """A view where users can submit reviews about an item they purchased"""
     url = request.META.get('HTTP_REFERER')
     if request.method == 'POST':
         try:

@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.contrib import messages
 from .models import Contact
+from django.contrib.auth.decorators import login_required
 
 
+@login_required(login_url='/accounts/login')
 def contact_form(request):
     """A view where users/shoppers can leave a comment or questions"""
     contact = Contact()

@@ -15,21 +15,23 @@ def view_wishlist(request):
 
 
 def add_wishlist(request):
+    """A view to add product in users wishlist"""
     if request.method == "POST":
         pid = request.POST.get('product-id')
         product = Product.objects.get(pk=pid)
         checkw = Wishlist.objects.filter(product=product, user=request.user).count()
         
         if checkw > 0:
-            messages.error(request, 'Item already in your wishlist')
-            return redirect(reverse('product_detail'))
+            messages.error(request, f'{product.name} already in your wishlist')
+            return redirect(reverse('view_wishlist'))
         else:
             Wishlist.objects.filter(product=product, user=request.user).create(product=product, user=request.user)
-            messages.success(request, 'Item successfully added on your wishlist')
+            messages.success(request, f'{product.name} successfully added in your wishlist')
             return redirect(reverse('view_wishlist'))
 
 
 def delete_wishlist(request):
+    """A view to delete product in users wishlist"""
     if request.method == "POST":
         wl_id = request.POST.get('wl-id')
         Wishlist.objects.filter(pk=wl_id).delete()
