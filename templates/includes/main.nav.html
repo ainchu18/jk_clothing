@@ -72,8 +72,8 @@
                 <li class="list-inline-item dropdown">
                     <a class="nav-link" href="" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="fas fa-user fa-md"></i>
-                        <span class="list-inline-item">My Account</span>
+                        <span class="icon"><i class='bx bxs-user bx-burst' ></i></span>
+                        My Account
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                         {% if request.user.is_authenticated %}
@@ -90,13 +90,13 @@
                 </li>
                 <li class="list-inline-item">
                     <a href="{% url 'view_wishlist' %}" class="nav-link">
-                        <i class="fa fa-heart"></i>
+                        <span class="icon"><i class='bx bxs-heart bx-burst' ></i></span>
                         My Wishlist
                     </a>
                 </li>
                 <li class="list-inline-item">
                     <a class="nav-link" href="{% url 'view_bag' %}">
-                        <i class="fas fa-shopping-bag fa-md"></i>
+                        <span class="icon"><i class='bx bxs-shopping-bag bx-burst' ></i></span>
                         {% if grand_total %}
                             &euro;{{ grand_total|floatformat:2 }}
                         {% else %}
