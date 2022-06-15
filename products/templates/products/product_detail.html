@@ -205,7 +205,8 @@
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
-    $(document).on('click', ".add-wishlist", function() {
+    $('.add-wishlist').click(function (e) {
+        
         var pid = $(this).attr('data-product');
         var dsble = $(this);
         $.ajax({
@@ -214,9 +215,11 @@
                 product:pid
             },
             dataType:'json',
-            success:function(response){
-                alertify.success(response.status);
-                if (response.bool==true) {
+            success:function(res){
+                if (res.bool==true) {
+                    dsble.addClass('disabled').removeClass('.add-wishlist');
+                }
+                else (res.bool==false); {
                     dsble.addClass('disabled').removeClass('.add-wishlist');
                 }
             }

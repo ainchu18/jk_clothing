@@ -54,18 +54,15 @@
                                 </td>
                         
                                 <td class="py-3">
-                                    <input type="hidden" class="prod_id" value="{{wl.product.id}}">
-                                    {% csrf_token %}
                                     <a href="{% url 'product_detail' wl.product.id %}" class="btn btn-pink btn-sm rounded">
                                         <span><i class="fa fa-eye"></i></span>
-                                        View product
                                     </a>
                                 </td>
                                 <td class="py-3">
-                                    <form action="">
-                                    <input type="hidden" class="prod_id" value="{{wl.product_id}}">
-                                    {% csrf_token %}
-                                    <input type="text" value="Remove from wishlist" class="btn btn-sm btn-pink rounded">
+                                    <form action="{% url 'delete_wishlist' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="wl-id" value="{{wl.id}}">
+                                        <input type="submit" value="Delete" class="btn btn-pink btn-sm rounded">
                                     </form>
                                 </td>
                             </tr>

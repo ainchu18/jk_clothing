@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.http import JsonResponse
 from .models import Wishlist
 from products.models import Product
@@ -22,11 +22,10 @@ def add_wishlist(request):
     checkw = Wishlist.objects.filter(product=product, user=request.user).count()
 
     if checkw > 0:
-        messages.success(request, 'Item already in your wishlist')
+        messages.error(request, 'Item already in your wishlist')
         data = {
             'bool': False
         }
-        
     else:
         wishlist = Wishlist.objects.create(
             product=product,
@@ -36,5 +35,12 @@ def add_wishlist(request):
         data = {
             'bool': True    
         }
-
     return JsonResponse(data)
+
+def delete_wishlist(request):
+    if request.method == "POST":
+        wl_id = request.POST.get('wl-id')
+        Wishlist.objects.filter(pk=wl_id).delete()
+
+        messages.success(request, 'Item successfully deleted from your wishlist')
+        return redirect(reverse('view_wishlist'))
