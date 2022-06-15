@@ -15,27 +15,19 @@ def view_wishlist(request):
 
 
 def add_wishlist(request):
+    if request.method == "POST":
+        pid = request.POST.get('product-id')
+        product = Product.objects.get(pk=pid)
+        checkw = Wishlist.objects.filter(product=product, user=request.user).count()
+        
+        if checkw > 0:
+            messages.error(request, 'Item already in your wishlist')
+            return redirect(reverse('product_detail'))
+        else:
+            Wishlist.objects.filter(product=product, user=request.user).create(product=product, user=request.user)
+            messages.success(request, 'Item successfully added on your wishlist')
+            return redirect(reverse('view_wishlist'))
 
-    pid = request.GET['product']
-    product = Product.objects.get(pk=pid)
-    data = {}
-    checkw = Wishlist.objects.filter(product=product, user=request.user).count()
-
-    if checkw > 0:
-        messages.error(request, 'Item already in your wishlist')
-        data = {
-            'bool': False
-        }
-    else:
-        wishlist = Wishlist.objects.create(
-            product=product,
-            user=request.user
-        )
-        messages.success(request, 'Item successfully added to your wishlist')
-        data = {
-            'bool': True    
-        }
-    return JsonResponse(data)
 
 def delete_wishlist(request):
     if request.method == "POST":

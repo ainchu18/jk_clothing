@@ -110,13 +110,13 @@
                     </div>
                 </form>
                 {% if user.is_authenticated %}
-                <a href="{% url 'product_detail' product.id %}" class="btn btn-pink btn-sm rounded mt-2 add-wishlist" data-product="{{ product.id }}">
-                    <span><i class='fa fa-heart'></i> Add to Wishlist</span>
-                </a>
+                <form action="{% url 'add_wishlist' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="product-id" value="{{ product.id }}">
+                    <input type="submit" value="Add to Wishlist" class="btn btn-pink btn-sm rounded mt-2">
+                </form>
                 {% else %}
-                <a href="#" class="btn btn-pink btn-sm rounded mt-2 disabled">
-                    <span><i class='fa fa-heart'></i> Add to Wishlist</span>
-                </a>
+                <input type="submit" value="Add to Wishlist" class="btn btn-pink btn-sm rounded disabled mt-2">
                 {% endif %}
             </div>
         </div>
@@ -204,26 +204,6 @@
 <script type="text/javascript">
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
-    })
-    $('.add-wishlist').click(function (e) {
-        
-        var pid = $(this).attr('data-product');
-        var dsble = $(this);
-        $.ajax({
-            url:"/wishlist/add-wishlist",
-            data:{
-                product:pid
-            },
-            dataType:'json',
-            success:function(res){
-                if (res.bool==true) {
-                    dsble.addClass('disabled').removeClass('.add-wishlist');
-                }
-                else (res.bool==false); {
-                    dsble.addClass('disabled').removeClass('.add-wishlist');
-                }
-            }
-        })
     })
 </script>
 {% include 'products/includes/quantity_input_script.html' %}
