@@ -17,9 +17,9 @@ body {
 }
 
 .container h1 {
-    font-size: 160px;
+    font-size: 180px;
     margin: 0;
-    font-weight: 900;
+    font-weight: 800;
     letter-spacing: 20px;
     color: #343434;
 }

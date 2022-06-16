@@ -7,4 +7,5 @@ def index(request):
 
 
 def handle_error(request, exception):
+    """A view to return a custom 404 page"""
     return render(request, 'custom-404-page.html')
