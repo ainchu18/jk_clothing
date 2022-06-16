@@ -21,9 +21,6 @@ body {
     margin: 0;
     font-weight: 900;
     letter-spacing: 20px;
-    background-color: url(/media/about-us.jpg) center no-repeat;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
 }
 
 .container a {
