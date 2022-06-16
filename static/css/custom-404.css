@@ -21,11 +21,12 @@ body {
     margin: 0;
     font-weight: 900;
     letter-spacing: 20px;
+    color: #343434;
 }
 
 .container a {
     text-decoration: none;
-    background: #574b90;
+    background: #786fa6;
     color: #fff;
     padding: 12px 24px;
     display: inline-block;
@@ -36,5 +37,5 @@ body {
 }
 
 .container a:hover {
-    background: #786fa6;
+    background: #574b90;
 }
