@@ -3,7 +3,7 @@
 Develpoer: JKCC
 
 JK Clothing is an online store where user and shoppers can view all the products, sort them out according to category, alphabetically and by their prices. The owner believes fashion is very important to todays world where you can express your feelings and emotions. Mix and match and show what your feeling through fashion. Users and shoppers also have the option to create an account, sign in to same and add products to their bag and securely checking out using stripe. Everyone is welcome and happy shopping! JK Clothing is a business to consumer(B2C) type of Ecommerce business model. B2C businesses sell to their end-user. The B2C model is the most common business model, so there are many unique approaches under this umbrella. Anything you buy in an online store as a consumer — think wardrobe, household supplies,
-entertainment — is done as part of a <strong>B2C</strong> transaction. The decision-making process for a B2C purchase is much shorter than a business-to-business (B2B)
+entertainment — is done as part of a B2C transaction. The decision-making process for a B2C purchase is much shorter than a business-to-business (B2B)
 purchase, especially for items that have a lower value. Because of this shorter sales cycle, B2C businesses typically spend less marketing funds to make a sale, but also have a lower average order value and less recurring orders than their B2B counterparts. And B2C doesn’t only include products, but services as well. This online shop uses the stripe payment system that is secure and reliable with confirmation email after successful purchase! Marketing strategies used in this site are the following: having social media accounts, users subscribing for newsletters so site owner can send marketing emails notice to their users, having free delivery if user purchased a certain amount is a good marketing tool as well to make users purchase more. Note: At the moment, after users subscribed for the newsletter, no marketing emails are send yet but can be customized in site owners mailchimp account.
 
 
@@ -43,6 +43,9 @@ purchase, especially for items that have a lower value. Because of this shorter 
     * [Checkout Page](#checkout)
     * [Reset Password Page](#reset)
     * [Explore the site](#search)
+    * Contact us
+    * Review/Rating
+    * My wishlist page
 5. [Validation](#validation)
     * [PEP8 Validation](#pep)
     * [HTML Validation](#html)
@@ -68,6 +71,9 @@ purchase, especially for items that have a lower value. Because of this shorter 
 * To be able to sort out products according to category, prices and alphabetical order.
 * To be able to search for products by name or description.
 * To easily select size and quantity of a product when purchasing.
+* To be able to write reviews and ratings on products
+* To be able to contact the seller/shop owner for queries, suggestions or comment abou the shop.
+* To be able to ad products on wishlist
 
 ### Developer Goals<a name=owner-goals></a>
 * To put up a template for in case in the future someone will ask the developer to do an online shop.
@@ -100,6 +106,9 @@ purchase, especially for items that have a lower value. Because of this shorter 
 * To be able to search for products by name or description.
 * To easily select size and quantity of a product when purchasing.
 * To be able to see purchase history
+* To be able to make a review/rating of a product after making an account for the site
+* To be able to contact the site owner after making an account for the site
+* To be able to add products on a wishlist after making an account for the site
 ### Site Owner Story<a name=site-owner></a>
 1. As the site owner, I want to be able to have an admin account so I can add, edit and delete products accordingly.
 2. As the site owner, I want to be able to see all the users that has registered for an account and all the orders that has been done on the shop.
@@ -113,16 +122,22 @@ purchase, especially for items that have a lower value. Because of this shorter 
 * Javascript
 * Heroku-Postgres
 * Mailchimp
-* XML sitemaps
+* XML sitemaps, robots.txt
+* stripe - used for handling payments
+* Github - used to mapped out user stories using the project and making an issue templete for the project to help the development of the project and keep track of progress during development. NOTE: the user stories and date line were not coinciding with when I committed the changes about it becauase I didnt have time to start the project again, make an issue template, make a poroject using the KANBAD BOARD to track my progress. BUT I KNOW HOW IMPORTANT THIS IS DURING DEVELOPMENT AND WILL USE IT IN THE FUTURE FOR SURE when starting a new project.
 
 ### Framework and Tools<a name=frameworks></a>
 * Bootstrap5 - for the site design on desktop and mobile to be responsive.
 * Fontawesome - for the overall font for the site
-* Github - used for storing the code for the site in a repositoty so other developers can see, fork and check it out.
+* Github - used for storing the code for the site in a repositoty so other developers can see, fork and check it out. Inside github, I made a default issue template for user stories of the project and I used kanban board to map out user stories and put it in a project to track progress of development.
 * Gitpod - the IDE used when developing the site
 * AWS-S3 - where all the static and media files are stored
 * Stripe - the payment system used when checking out
 * Heroku - where the app is deployed
+* draw.io - used for the ERD and website flow chart
+### Technical Design
+
+
 ---
 ## Features
 ### Website Pages
@@ -159,6 +174,10 @@ The website is structured into pages, each with clear, concise structure, inform
 ![Checkout page Image](media/reset.png)
 15. Search or explore the site<a name=search></a>: This page is where users/shoppers go to search for items vie name or description.
 ![Search or Explore the site Image](media/search.jpg)
+16. Contact Us: This is where login users can contact the shop owner/site admin. Note: For reasons of unwanted users to unnecessarily contact or send unnecessary message to site owner, this option will only be available to verified users. Also, in the future, I want to add a logic where verified users details will be automatically fill the name and email input area.
+17. Review/rating form: This is where login users can post a review/rating about a product. Note: In the future, I want to add options for login users to update or delete their reviews.
+18. Wishlist Page: This is where login users can ad products to their wishlist, view it and delete if needed.
+Note: In the future, I want to add a button where users can directly add wishlist product to their shopping bag.
 
 ---
 
@@ -166,20 +185,16 @@ The website is structured into pages, each with clear, concise structure, inform
 * The website is a data-centric one with html, javascript, css used with the bootstrap framework as a frontend
 * The backend consists of Python-django, heroku database, aws s3 for the media and static files
 
-## Note 
-* I am really busy at work these past few days that is why I wasnt able to include a diagram explaining about models in python-django its relations and links. I now know that this is important part of documentation process and will do so once I am doing an actual project. Thanks for understanding.
-
 ## Validation<a name=validation></a>
 ### PEP8 Validation<a name=pep></a>
-* http://pep8online.com/ was use to validate the python code written. Result came back with warnings of line of code too long. I am not sure how to fix them without ruining the site or it might not work if I edit it. Will try and learn how to do this in the future as for now, due to time constraints, I will leave it be as it is not affecting the overall performance of the site.
-On one hand, with regards to Unitest, I am still not sure how to do this so I wasnt able to include any of these in the code. Will learn about this more in the future when I have more time to focus on it.
+* http://pep8online.com/ was use to validate the python code written. There are still warnings of line of code too long. I will leave it be as it is not affecting the overall performance of the site. In time, I will fix this using flake8 and if I have more time.
 ### HTML Validation<a name=html></a>
-* https://validator.w3.org/ was used to check the html files on this site. According to the site, there are 8 errors on this site. 6 of these said the duplicate id's, but when I checked the code, it says that I used duplicate id but this id was used for a dropdown options. 2 of these error said that form are not allowed to be a child of an ul. Tried to fix it but the overall look of the site change, so I kept it knowing and being aware of the error and will learn in the future not to do this. For now, due to time constraint, I will leave it be as the this error is not affecting the seach function of the site.
+* https://validator.w3.org/ was used to check the html files on this site. According to the site, there are 8 errors on this site. 6 of these said the duplicate id's, but when I checked the code, it says that I used duplicate id but this id was used for a dropdown options. 2 of these error said that form are not allowed to be a child of an ul. Tried to fix it but the overall look of the site change, so I kept it knowing and being aware of the error and will learn in the future not to do this. For now, due to time constraint, I will leave it be as the this error is not affecting functionality of the site.
 ### CSS Validation<a name=css></a>
 * https://jigsaw.w3.org/css-validator/ was used to check all the CSS files on this site. There were no errors or warnings found.
 ### JS Validation<a name=js></a>
-* https://jshint.com was used to check the Javascript files used in this site. There were 5 warnings about template literal only available in ES6
-## User/Shopper Stories Testing<a name=stories></a>
+* https://jshint.com was used to check the Javascript files used in this site. There were 5 warnings about template literal only available in ES6 but not affecting the functionality so I kept it the same. In time, will learn about this and fix it.
+## User/Shopper Stories Manual Testing<a name=stories></a>
 1. To be able to view all products and each individual products with its details.
 
 | Feature      | Action    | Result    |
@@ -234,17 +249,35 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 | :------------- | :----------: | -----------: |
 | Search/Explore our site  | You can see this on the upper right hand side of the site where you can type in keywords and description and products with said desctiption or name will show on the screen. | Worked    |
 
-10. * To easily select size and quantity of a product when purchasing.
+10. To easily select size and quantity of a product when purchasing.
 
 | Feature      | Action    | Result    |
 | :------------- | :----------: | -----------: |
 | Product Details Page  | When you clicked onto one item, it will bring you to the product details page, where you can select sizes if available for that item and the quantity you want to buy. | Worked    |
 
-11. * To be able to see purchase history
+11. To be able to see purchase history
 
 | Feature      | Action    | Result    |
 | :------------- | :----------: | -----------: |
 | Profile Page  | When you have an account and use it to purchase multiple times on the shop, when you go to your profile page, it will show your purchase history. | Worked    |
+
+12. To be able to make a review/rating of a product after making an account for the site
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Product Detail page  | When login as a verified user, you can add review/rating of a certain product. | Worked    |
+
+13. To be able to contact the site owner after making an account for the site
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Contact Us page  | When login as a verified user, you can send a message to the shop owner. | Worked    |
+
+14. To be able to add products on a wishlist after making an account for the site
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Wishlist Page  | When login as a verified user, you can add products to the wishlist and delete them if needed. | Worked    |
 
 ### Site Owner Story Testing<a name=owner></a>
 1. As the site owner, I want to be able to have an admin account so I can add, edit and delete products accordingly.
@@ -261,8 +294,8 @@ On one hand, with regards to Unitest, I am still not sure how to do this so I wa
 
 ---
 ## Bugs<a name=bugs></a>
-* Initially, when going to product details if the item has sizes, there will be an option to select the specific size you want, but recently when I was doing the readme, I noticed that its not showing anymore. At the moment, I tried fixing it, but to no avail. I will try and fix this in the future but for now, I have no time to do so.
-
+* The previous submitted project, there was no email confirmation send to users after a successful purchase, but was able to fix this using the django email message class. I added it in the the checkout_success view.py in the checkout app and it worked on testing. Made a purchase using the stripe and I received an email confirming my purchase.
+* During development or when using the virtual environment, I can still see the product sizes for products that have sizes but after deploying the site, the sizes option disappeared. Will try and fix it again if I had more time to learn or check where the problem was.
 ---
 ## Mock up social media product page
 This section shows the fake social media groups and accounts I made just for the site. You can access this by pressing onto the social media icon on the footer area and it will redirect you to the said pages.
@@ -277,11 +310,10 @@ This section shows the fake social media groups and accounts I made just for the
 2. Login or create a Heroku account
 3. Click the "new" button in the upper right corner and select "create new app".
 4. Choose an app name and your region and click "Create app".
-5. Go to the "settings" tab, add the python build pack and then the node.js build pack and add all the variables needed for the site.
-6. Go to the "deploy" tab and pick GitHub as a deployment method.
-7. Search for a repository to connect to
-8. Click enable automatic deploys and then deploy branch
-9. Wait for the app to build and then click on the "View" link.
+5. After creating an app, due to some security reasons, heroku doesnt allow users to connect their github repository for deployment. Thus, using the gitpot terminal, type: heroku login -i and logged in with my credentials
+6. After this I typed: heroku git:remote -a jk-clothing
+8. Then typed: git push heroku main
+9. Wait for the app to build and deploy the app heroku and in the gitpod terminal you can use control+mouse left click to open the deployed site. Or you can just open your heroku account, got the apps sections, click on the app name and click open app button found on the right top side.
 
 ### You can fork the repository by following these steps:
 
@@ -316,8 +348,9 @@ This section shows the fake social media groups and accounts I made just for the
 * Code institute for the tutorial on how python-django works.
 * Google
 * Youtube
+* boxicons.com - used for the button icons on the site
+* draw.io - used for the ERD and web design process
 * Lastly, I would like to thank JK, you know who you are. Thanks for the advice, for cheering me up when I'm stressed out and thank you for your belief in me that I can do this course and succeed.
 
-## Notice and Plans for the Future
-There are still plenty of things to be improved on this site. Tried testing the site using the chrome dev tools lighthouse and WAVS and the site needs plenty of improvements with regards to accessibility, contrast of colors, color scheme, and some coding issues that for now I have no time to fix. Due to lack of time and unforseen circumstances, I would like to apologize for this project for it not being up to the best standard. Will do my best in the future to improve and fix this.
-There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a function that will sort out the items from male and female items. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. I did my best to do this site eventhough there are more things to improve. Lastly, incorporate proper responsiveness on tablet devices which I tried to fixed but still doesnt look good. Would gladly appreciate any suggestions to improve this site. Thanks and Happy Easter!
+## Plans for the Future
+There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a function that will sort out the items from male and female and kids items so it is easier for the users to browse the site. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. Third, is to add like a promo code functionality where users can use promo code to have some discounts and buy more items in return. Lastly, for marketing purposes and for users to buy more, I would like to add a function users can buy 1 item and get a half price for the second item and sending newsletters to subscribe users for them to be notified or new arrivals, discounts and ongoing sales on the shop and to send promo codes to subscribe users to entice them to go to the site and but products.
