@@ -27,6 +27,7 @@ purchase, especially for items that have a lower value. Because of this shorter 
 3. [Technologies Used](#technology)
     * [Languages](#languages)
     * [Frameworks and Tools](#frameworks)
+    * [Technical Design](#design)
 4. [Features](#features)
     * [Home Page](#home)
     * [Register Page](#register)
@@ -43,9 +44,9 @@ purchase, especially for items that have a lower value. Because of this shorter 
     * [Checkout Page](#checkout)
     * [Reset Password Page](#reset)
     * [Explore the site](#search)
-    * Contact us
-    * Review/Rating
-    * My wishlist page
+    * [Contact Us](#contact)
+    * [Review/Rating](#review)
+    * [Wishlist Page](#wishlist)
 5. [Validation](#validation)
     * [PEP8 Validation](#pep)
     * [HTML Validation](#html)
@@ -135,7 +136,7 @@ purchase, especially for items that have a lower value. Because of this shorter 
 * Stripe - the payment system used when checking out
 * Heroku - where the app is deployed
 * draw.io - used for the ERD and website flow chart
-### Technical Design
+### Technical Design<a name=design></a>
 
 
 ---
@@ -174,9 +175,9 @@ The website is structured into pages, each with clear, concise structure, inform
 ![Checkout page Image](media/reset.png)
 15. Search or explore the site<a name=search></a>: This page is where users/shoppers go to search for items vie name or description.
 ![Search or Explore the site Image](media/search.jpg)
-16. Contact Us: This is where login users can contact the shop owner/site admin. Note: For reasons of unwanted users to unnecessarily contact or send unnecessary message to site owner, this option will only be available to verified users. Also, in the future, I want to add a logic where verified users details will be automatically fill the name and email input area.
-17. Review/rating form: This is where login users can post a review/rating about a product. Note: In the future, I want to add options for login users to update or delete their reviews.
-18. Wishlist Page: This is where login users can ad products to their wishlist, view it and delete if needed.
+16. Contact Us<a name=contact></a>: This is where login users can contact the shop owner/site admin. Note: For reasons of unwanted users to unnecessarily contact or send unnecessary message to site owner, this option will only be available to verified users. Also, in the future, I want to add a logic where verified users details will be automatically fill the name and email input area.
+17. Review/rating form<a name=review></a>: This is where login users can post a review/rating about a product. Note: In the future, I want to add options for login users to update or delete their reviews.
+18. Wishlist Page<a name=wishlist></a>: This is where login users can ad products to their wishlist, view it and delete if needed.
 Note: In the future, I want to add a button where users can directly add wishlist product to their shopping bag.
 
 ---
