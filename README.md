@@ -47,6 +47,8 @@ purchase, especially for items that have a lower value. Because of this shorter 
     * [Contact Us](#contact)
     * [Review/Rating](#review)
     * [Wishlist Page](#wishlist)
+    * [Custom 404](#404)
+    * [Newsletter](#letter)
 5. [Validation](#validation)
     * [PEP8 Validation](#pep)
     * [HTML Validation](#html)
@@ -137,7 +139,9 @@ purchase, especially for items that have a lower value. Because of this shorter 
 * Heroku - where the app is deployed
 * draw.io - used for the ERD and website flow chart
 ### Technical Design<a name=design></a>
-
+Technical design was based on the most common E-commerce online shop and the botuiqe ado project from Code institute with some modifications and addendums. Lato font family was the typography used in this site and with the color schemes, pink was chosen as the primary color of the site comprising most of it. With regards to the custom 404 page, I used flatuicolors.com to get some colors and combined them together to make the 404 page. Lastly, I used boxicons.com for the moving icons on the buttons and for the icon the browser tab.
+![Simple ERD](media/jk-clothing-erd.png)
+![Simple website flow](media/website-flow.png)
 
 ---
 ## Features
@@ -176,9 +180,18 @@ The website is structured into pages, each with clear, concise structure, inform
 15. Search or explore the site<a name=search></a>: This page is where users/shoppers go to search for items vie name or description.
 ![Search or Explore the site Image](media/search.jpg)
 16. Contact Us<a name=contact></a>: This is where login users can contact the shop owner/site admin. Note: For reasons of unwanted users to unnecessarily contact or send unnecessary message to site owner, this option will only be available to verified users. Also, in the future, I want to add a logic where verified users details will be automatically fill the name and email input area.
+![Contact Us](media/contact-us.png)
 17. Review/rating form<a name=review></a>: This is where login users can post a review/rating about a product. Note: In the future, I want to add options for login users to update or delete their reviews.
+![Review](media/review1.png)
+![Wishlist](media/review2.png)
 18. Wishlist Page<a name=wishlist></a>: This is where login users can ad products to their wishlist, view it and delete if needed.
+![Wishlist](media/wishlist.png)
 Note: In the future, I want to add a button where users can directly add wishlist product to their shopping bag.
+19. Custom 404 page<a name=404></a>: This page is where users are redirected when they mistyped the URL, the page is temporarily unavailable, or the page no longer exists.
+This page will let the user know that there is an error with their request.
+![Custom 404](media/404.png)
+20. Newsletter Page<a name=letter></a>: This section in the home page is where users can subscribe for a newsletter where the site owner can send some marketing emails, ongoing sales. Mailchimp was used to make this part of the site.
+![Newsletter](media/newsletter.png)
 
 ---
 
@@ -212,13 +225,13 @@ Note: In the future, I want to add a button where users can directly add wishlis
 
 | Feature      | Action    | Result    |
 | :------------- | :----------: | -----------: |
-| My account page | When you opened the app, and click on the my account option a dropdown will show to either log in or sign up.  | Worked    |
+| My account page | When you opened the app, and click on the my account option a dropdown will show to either log in or sign up. After creating an account, you will receive a verification email, after verifying, you can log in.   | Worked    |
 
 4. * To be able to securely checkout when purchasing items from the shop
 
 | Feature      | Action    | Result    |
 | :------------- | :----------: | -----------: |
-| Checkout page | When you opened the app, and chose an item to add in your bag, and select checkout button. | Worked    |
+| Checkout page | When you opened the app, and chose an item to add in your bag, and select checkout button. After that an email confirmation will be receive in the users email. | Worked    |
 
 5. To easily recover password in case users forgot it.
 
@@ -268,13 +281,13 @@ Note: In the future, I want to add a button where users can directly add wishlis
 | :------------- | :----------: | -----------: |
 | Product Detail page  | When login as a verified user, you can add review/rating of a certain product. | Worked    |
 
-13. To be able to contact the site owner after making an account for the site
+13. To be able to contact the site owner/shop. Note: making an account for the site is required to do this
 
 | Feature      | Action    | Result    |
 | :------------- | :----------: | -----------: |
 | Contact Us page  | When login as a verified user, you can send a message to the shop owner. | Worked    |
 
-14. To be able to add products on a wishlist after making an account for the site
+14. To be able to add products on a wishlist. Note:making an account for the site to do this
 
 | Feature      | Action    | Result    |
 | :------------- | :----------: | -----------: |
@@ -295,7 +308,7 @@ Note: In the future, I want to add a button where users can directly add wishlis
 
 ---
 ## Bugs<a name=bugs></a>
-* The previous submitted project, there was no email confirmation send to users after a successful purchase, but was able to fix this using the django email message class. I added it in the the checkout_success view.py in the checkout app and it worked on testing. Made a purchase using the stripe and I received an email confirming my purchase.
+* The previous submitted project, there was no email confirmation sent to users after a successful purchase, but was able to fix this using the django email message class. I added it in the the checkout_success view.py in the checkout app and it worked on testing. Made a purchase using the stripe and I received an email confirming my purchase.
 * During development or when using the virtual environment, I can still see the product sizes for products that have sizes but after deploying the site, the sizes option disappeared. Will try and fix it again if I had more time to learn or check where the problem was.
 ---
 ## Mock up social media product page
@@ -339,7 +352,7 @@ This section shows the fake social media groups and accounts I made just for the
 * Django documentations
 * Stripe documentations
 ### Images
-* The images used in this site was from the Boutique Ado project by the Code institute and unsplash.com for the photos for the home page.
+* The images used in this site was from the Boutique Ado project by the Code institute and unsplash.com for the photos for the home page. 
 ### Overall UI
 * This was inspired by the carousel template in bootstrap with some modifications.
 
@@ -352,6 +365,7 @@ This section shows the fake social media groups and accounts I made just for the
 * boxicons.com - used for the button icons on the site
 * draw.io - used for the ERD and web design process
 * Lastly, I would like to thank JK, you know who you are. Thanks for the advice, for cheering me up when I'm stressed out and thank you for your belief in me that I can do this course and succeed.
+* flatuicolors.com - for the colors I used for the customs 404 page
 
 ## Plans for the Future
-There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a function that will sort out the items from male and female and kids items so it is easier for the users to browse the site. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. Third, is to add like a promo code functionality where users can use promo code to have some discounts and buy more items in return. Lastly, for marketing purposes and for users to buy more, I would like to add a function users can buy 1 item and get a half price for the second item and sending newsletters to subscribe users for them to be notified or new arrivals, discounts and ongoing sales on the shop and to send promo codes to subscribe users to entice them to go to the site and but products.
+There are things that I want to add onto this site that might improve the overall experience of users. First, is to add a function that will sort out the items from male and female and kids items so it is easier for the users to browse the site. Second, is to add like a currency option so user from all over the world can choose whats is appropriate for them. Third, is to add like a promo code functionality where users can use promo code to have some discounts and buy more items in return. Lastly, for marketing purposes and for users to buy more, I would like to add a function users can buy 1 item and get a half price for the second item and sending newsletters to subscribe users for them to be notified or new arrivals, discounts and ongoing sales on the shop and to send promo codes to subscribe users to entice them to go to the site and buy more products.
