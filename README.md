@@ -189,7 +189,7 @@ The website is structured into pages, each with clear, concise structure, inform
 ![Search or Explore the site Image](media/search.png)
 16. Contact Us<a name=contact></a>: This is where login users can contact the shop owner/site admin. Note: For reasons of unwanted users to unnecessarily contact or send unnecessary message to site owner, this option will only be available to verified users. Also, in the future, I want to add a logic where verified users details will be automatically fill the name and email input area.
 ![Contact Us](media/contact-us.png)
-17. Review/rating form<a name=review></a>: This is where login users can post a review/rating about a product. Note: In the future, I want to add options for login users to update or delete their reviews.
+17. Review/rating form<a name=review></a>: This is where login users can post a review/rating about a product. Note: Soon, I want to add options for login users to update or delete their reviews but I didnt have time left.
 ![Review](media/review1.png)
 ![Wishlist](media/review2.png)
 18. Wishlist Page<a name=wishlist></a>: This is where login users can ad products to their wishlist, view it and delete if needed.
