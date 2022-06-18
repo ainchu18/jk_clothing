@@ -77,6 +77,7 @@ purchase, especially for items that have a lower value. Because of this shorter 
 * To be able to write reviews and ratings on products
 * To be able to contact the seller/shop owner for queries, suggestions or comment abou the shop.
 * To be able to ad products on wishlist
+* To be able to subscribe to a newsletter
 
 ### Developer Goals<a name=owner-goals></a>
 * To put up a template for in case in the future someone will ask the developer to do an online shop.
@@ -112,6 +113,7 @@ purchase, especially for items that have a lower value. Because of this shorter 
 * To be able to make a review/rating of a product after making an account for the site
 * To be able to contact the site owner after making an account for the site
 * To be able to add products on a wishlist after making an account for the site
+* To be able to subscribe to a newsletter
 ### Site Owner Story<a name=site-owner></a>
 1. As the site owner, I want to be able to have an admin account so I can add, edit and delete products accordingly.
 2. As the site owner, I want to be able to see all the users that has registered for an account and all the orders that has been done on the shop.
@@ -294,6 +296,13 @@ This page will let the user know that there is an error with their request.
 | Feature      | Action    | Result    |
 | :------------- | :----------: | -----------: |
 | Wishlist Page  | When login as a verified user, you can add products to the wishlist and delete them if needed. | Worked    |
+
+15. To be able to subscribe to a newsletter
+
+| Feature      | Action    | Result    |
+| :------------- | :----------: | -----------: |
+| Newsletter  | Scroll down to the end of the home page and enter your email to subscribe to newsletters | Worked    |
+
 
 ### Site Owner Story Testing<a name=owner></a>
 1. As the site owner, I want to be able to have an admin account so I can add, edit and delete products accordingly.
