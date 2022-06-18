@@ -11,7 +11,7 @@ purchase, especially for items that have a lower value. Because of this shorter 
 
 ---
 
-![App Image](media/home-page.png)
+![App Image](media/home.png)
 
 ---
 ## Table of Contents
@@ -148,29 +148,31 @@ Technical design was based on the most common E-commerce online shop and the bot
 ### Website Pages
 The website is structured into pages, each with clear, concise structure, information and purpose. I use the Bootstrap grid system throughout, which gave a consistent structure and responsive design.
 1. Home/Landing Page<a name=home></a>: This is the landing page, and the first page the user encounters when they access the site, before they log in/register. This uses a carousel template with some changes from bootstrap5.
-![Landing page Image](media/home-page.png)
-![Landing page Image](media/home-page2.png)
-![Landing page Image](media/home-page3.png)
+![Landing page Image](media/home.png)
+![Landing page Image](media/home2.png)
+![Landing page Image](media/home3.png)
+![Landing page Image](media/newsletter.png)
 2. Register<a name=register></a>: This page allows the user to register an account
-![Sign up Image](media/sign-up.png)
+![Sign up Image](media/register.png)
 3. Login<a name=login></a>: This page allows the user to login to the site
 ![Sign in Image](media/login.png)
 4. Logout<a name=logout></a>: This page allows the user to logout the site
-![Sign out Image](media/signout.png)
+![Sign out Image](media/logout.png)
 5. All products<a name=all-products></a>: This page shows all the products available on the shop.
-![All product page Image](media/all-products.png)
+![All product page Image](media/products.png)
 6. Product Details<a name=product-details></a>: This page shows the details of a specific product.
-![Product detail page Image](media/product-details.png)
+![Product detail page Image](media/review1.png)
+![Product detail page Image](media/review2.png)
 7. Clothing page<a name=clothing></a>: This page shows the clothing items on the shop.
 ![Clothing page Image](media/clothing.png)
 8. Homeware Page<a name=homeware></a>: This page shows all the hardware items on the shop.
 ![Homeware page Image](media/homeware.png)
 9. Special offers<a name=specials></a>: This page shows all items that are on clearance and special offers/sale.
-![Special Offers page Image](media/deals.png)
+![Special Offers page Image](media/offers.png)
 10. Profile<a name=profile></a>: This page is where shoppers with a registered account can edit their profiles accordingly.
 ![Profile page Image](media/profile.png)
 11. Product Management<a name=management></a>: This page allows the site owner to easily edit, add and delete items from the shop.
-![Product Mgt page Image](media/product-mgt.png)
+![Product Mgt page Image](media/product-manage.png)
 12. Shopping bag<a name=bag></a>: This page shows all the items the shopper wants to buy.
 ![Shopping bag page Image](media/bag.png)
 13. Checkout<a name=checkout></a>: This page is where users/shoppers put their payment details in order for them to purchase items from the shop.
@@ -178,7 +180,7 @@ The website is structured into pages, each with clear, concise structure, inform
 14. Reset Password<a name=reset></a>: This page is where users/shoppers go to reset their password if they forgot it.
 ![Checkout page Image](media/reset.png)
 15. Search or explore the site<a name=search></a>: This page is where users/shoppers go to search for items vie name or description.
-![Search or Explore the site Image](media/search.jpg)
+![Search or Explore the site Image](media/search.png)
 16. Contact Us<a name=contact></a>: This is where login users can contact the shop owner/site admin. Note: For reasons of unwanted users to unnecessarily contact or send unnecessary message to site owner, this option will only be available to verified users. Also, in the future, I want to add a logic where verified users details will be automatically fill the name and email input area.
 ![Contact Us](media/contact-us.png)
 17. Review/rating form<a name=review></a>: This is where login users can post a review/rating about a product. Note: In the future, I want to add options for login users to update or delete their reviews.
@@ -314,8 +316,11 @@ This page will let the user know that there is an error with their request.
 ## Mock up social media product page
 This section shows the fake social media groups and accounts I made just for the site. You can access this by pressing onto the social media icon on the footer area and it will redirect you to the said pages.
 ![Footer and Social media image](media/footer.png)
+Mock Facebook Page
 ![Fake Facebook image](media/fb.png)
+Mock Twitter Page
 ![Fake Twitter image](media/twitter.png)
+Mock Youtube channel
 ![Fake Youtube image](media/yt.png)
 ## Depolyment<a name=deployment></a>
 ### The website was deployed using Heroku by following these steps:
