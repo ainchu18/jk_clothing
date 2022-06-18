@@ -142,7 +142,11 @@ purchase, especially for items that have a lower value. Because of this shorter 
 * draw.io - used for the ERD and website flow chart
 ### Technical Design<a name=design></a>
 Technical design was based on the most common E-commerce online shop and the botuiqe ado project from Code institute with some modifications and addendums. Lato font family was the typography used in this site and with the color schemes, pink was chosen as the primary color of the site comprising most of it. With regards to the custom 404 page, I used flatuicolors.com to get some colors and combined them together to make the 404 page. Lastly, I used boxicons.com for the moving icons on the buttons and for the icon the browser tab.
+
+Simple ERD
 ![Simple ERD](media/jk-clothing-erd.png)
+
+Simple website flow/technical design
 ![Simple website flow](media/website-flow.png)
 
 ---
